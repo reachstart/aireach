@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Reach Web Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#0f172a', // Slate 900
+              surface: '#1e293b',    // Slate 800
+              primary: '#3b82f6',    // Blue 500
+              secondary: '#64748b',  // Slate 500
+              accent: '#06b6d4',     // Cyan 500
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+      
+      /* Markdown Styles */
+      .prose pre {
+        background-color: #0f172a !important;
+        border: 1px solid #334155;
+      }
+      .prose code {
+        color: #e2e8f0 !important;
+      }
+      .prose a {
+        color: #3b82f6;
+        text-decoration: none;
+      }
+      .prose a:hover {
+        text-decoration: underline;
+      }
+      .prose strong {
+        color: #f8fafc;
+      }
+      .prose h1, .prose h2, .prose h3, .prose h4 {
+        color: #f1f5f9;
+      }
+      .prose ul > li::marker {
+        color: #94a3b8;
+      }
+      
+      /* Mobile optimization */
+      html, body {
+        height: 100%;
+        overscroll-behavior-y: none; /* Prevent bounce on mobile */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-background text-slate-100 antialiased h-screen overflow-hidden supports-[height:100dvh]:h-[100dvh]">
+    <div id="root" class="h-full flex flex-col"></div>
+  </body>
+</html>

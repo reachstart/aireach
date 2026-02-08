@@ -1,0 +1,7 @@
+{
+  "name": "Reach Web Chat",
+  "description": "A premium, responsive AI chat interface powered by Google Gemini 2.5 and 3.0 models. Features real-time streaming, multimodal support, and Google Search grounding.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
